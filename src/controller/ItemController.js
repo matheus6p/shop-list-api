@@ -25,7 +25,9 @@ export async function addItem(req, res) {
 export async function editItem(req, res) {
   const { id } = req.params;
   try {
-    const editedItem = await Item.findByIdAndUpdate(id, req.body);
+    const editedItem = await Item.findById(id);
+    editedItem.completed = !editedItem.completed;
+    editedItem.save();
     res.status(200).json({ message: "Updated", editedItem });
   } catch (err) {
     return res.status(404).json({ error: err.message });

@@ -13,7 +13,7 @@ router
   .post("/addItem", addItem)
   .get("/items", getItems)
   .put("/items/:id", editItem)
-  .patch("/items/:id", editItem)
+  .get("/items/completed/:id", editItem)
   .delete("/items/:id", deleteItem)
   .delete("/deleteAll", clearList);
 
