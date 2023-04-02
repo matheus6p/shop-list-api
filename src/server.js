@@ -1,3 +1,3 @@
 import app from "./index.js";
-
-app.listen(process.env.PORT || 3333, () => console.log("Server Running..."));
+const port = 3333
+app.listen(process.env.PORT || port, () => console.log(`Server Running at ${port}`));
