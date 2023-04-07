@@ -1,25 +1,31 @@
 import mongoose from "mongoose";
 import Item from "../../models/Items.js";
 import db from "../dbConnect.js";
+import { v4 as uuidv4 } from "uuid";
 
 const items = [
   {
+    _id: uuidv4(),
     name: "Arroz",
     isCompleted: false,
   },
   {
+    _id: uuidv4(),
     name: "Feijão",
     isCompleted: false,
   },
   {
+    _id: uuidv4(),
     name: "Macarrão",
     isCompleted: false,
   },
   {
+    _id: uuidv4(),
     name: "Azeite",
     isCompleted: false,
   },
   {
+    _id: uuidv4(),
     name: "Sal",
     isCompleted: false,
   },
