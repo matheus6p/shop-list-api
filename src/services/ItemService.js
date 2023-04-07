@@ -13,7 +13,7 @@ export class ItemService {
 
   async toggleItemCompleted(id) {
     const item = await Item.findById(id);
-    item.completed = !item.completed;
+    item.isCompleted = !item.isCompleted;
     const editedItem = await item.save();
     return editedItem;
   }
