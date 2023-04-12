@@ -8,9 +8,13 @@ db.once("open", () => console.log("Conexão com o banco feita com sucesso."));
 
 const app = express();
 
-app.use(cors);
+app.use(cors({
+  methods: 'GET,POST,PATCH,DELETE,OPTIONS',
+  optionsSuccessStatus: 200,
+  origin: 'https://shop-list-kappa.vercel.app/'
+}));
 app.use(express.json());
-
+app.options('*', cors())
 app.use(ItemRoutes);
 
 export default app;
