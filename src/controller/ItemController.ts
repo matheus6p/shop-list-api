@@ -4,10 +4,6 @@ import { ItemService } from "../services/ItemService";
 const itemService = new ItemService();
 
 export async function getItems(req: Request, res: Response) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://shop-list-kappa.vercel.app/"
-  );
   try {
     const items = await itemService.getAllItems();
     return res.status(200).json(items);
@@ -16,7 +12,7 @@ export async function getItems(req: Request, res: Response) {
   }
 }
 
-export async function addItem(req: Request, res: Response) {
+export async function addItem(req: Request , res: Response) {
   const item = req.body;
   if (!item) {
     return res.status(404).send();
