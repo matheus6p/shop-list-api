@@ -8,7 +8,7 @@ db.once("open", () => console.log("Conexão com o banco feita com sucesso."));
 
 const app = express();
 
-app.use(cors());
+app.use(cors({origin: '*'}));
 app.use(express.json());
 
 app.use(ItemRoutes);
