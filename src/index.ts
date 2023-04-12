@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
   methods: 'GET,POST,PATCH,DELETE,OPTIONS',
   optionsSuccessStatus: 200,
-  origin: ['https://shop-list-kappa.vercel.app/', 'http://localhost:5173']
+  origin: "*"
 }));
 app.use(express.json());
 app.options('*', cors())
