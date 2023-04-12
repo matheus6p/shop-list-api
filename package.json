@@ -2,7 +2,7 @@
   "name": "shop-list",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "dist/server.cjs",
   "type": "module",
   "scripts": {
     "start": "node dist/index.cjs",
