@@ -5,7 +5,7 @@
   "main": "dist/server.cjs",
   "type": "module",
   "scripts": {
-    "start": "node dist/index.cjs",
+    "start": "node dist/server.cjs",
     "build": "tsup src",
     "dev": "tsx watch src/server.ts",
     "seed": "tsx src/config/seeder/seeder.ts"
