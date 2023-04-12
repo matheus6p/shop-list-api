@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import Item from "../../models/Items";
-import db from "../dbConnect";
+import Item from "../../models/Items.js";
+import db from "../dbConnect.js";
 import { v4 as uuidv4 } from "uuid";
 
 const items = [
