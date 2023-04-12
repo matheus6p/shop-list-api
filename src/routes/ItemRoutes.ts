@@ -5,7 +5,7 @@ import {
   editItem,
   deleteItem,
   clearList,
-} from "../controller/ItemController.js";
+} from "../controller/ItemController";
 
 const router = express.Router();
 
